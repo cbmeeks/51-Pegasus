@@ -1,0 +1,4 @@
+.var CHAR_SET	=	$C000
+
+.var SCR_BUFFER	=	$C800
+.var DBL_BUFFER =	$CC00
