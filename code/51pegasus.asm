@@ -1,6 +1,7 @@
 // Imports
 .import source "vars.asm"
 .import source "engine/screen.asm"
+.import source "engine/map.asm"
 
 .pc = $0801 "Basic Upstart"
 :BasicUpstart(start)
@@ -10,18 +11,27 @@ start:
 	
 	:SetVICBank3()
 	:SetScreenAndCharLocation(SCR_BUFFER, CHAR_SET)
-	:ClearScreen(SCR_BUFFER, 10)
-	:ClearScreen(DBL_BUFFER, 1)
+	:ClearScreen(SCR_BUFFER, 0)
+	:ClearScreen(DBL_BUFFER, 0)
 
 	:ClearColorRam(10)
 	:SetBorderColor(BLACK)
 	:SetBackgroundColor(BLACK)
 	:SetMultiColor1(LIGHT_BLUE)
 	:SetMultiColor2(BLUE)
-	:SetMultiColorMode()	
+	:SetMultiColorMode()
 
-	
+	lda #<MAP_BUFFER
+	sta MAP_PTR_LOW
+	lda #>MAP_BUFFER
+	sta MAP_PTR_HI
 
+	lda #<SCR_BUFFER
+	sta CUR_BUFFER_PTR_LOW
+	lda #>SCR_BUFFER
+	sta CUR_BUFFER_PTR_HI
+
+	jsr startdrawmap
 
 loop:
 	jmp loop
