@@ -1,4 +1,4 @@
-x/*
+/*
 	Character memory
 	$D018 = %xxxx000x -> charmem is at $0000
 	$D018 = %xxxx001x -> charmem is at $0800

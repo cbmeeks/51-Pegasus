@@ -10,11 +10,11 @@ start:
 	
 	:SetVICBank3()
 	:SetScreenAndCharLocation(SCR_BUFFER, CHAR_SET)
-	:ClearScreen(SCR_BUFFER0, 0)
+	:ClearScreen(SCR_BUFFER, 0)
 	:SetMultiColorMode()
 
 	// set background and border to black
-	lda #0
+	lda #BLUE
 	sta $d021
 	sta $d020
 	
