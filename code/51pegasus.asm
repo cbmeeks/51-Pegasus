@@ -7,8 +7,8 @@
 :BasicUpstart(start)
 
 .pc = $0900 "51 Pegasus"
-start:
-	
+
+start:	
 	:SetVICBank3()
 	:SetScreenAndCharLocation(SCR_BUFFER, CHAR_SET)
 	:ClearScreen(SCR_BUFFER, 0)
@@ -22,12 +22,12 @@ start:
 	:SetMultiColorMode()
 
 	lda #<MAP_BUFFER
-	sta MAP_PTR_LOW
+	sta MAP_PTR_LO
 	lda #>MAP_BUFFER
 	sta MAP_PTR_HI
 
 	lda #<SCR_BUFFER
-	sta CUR_BUFFER_PTR_LOW
+	sta CUR_BUFFER_PTR_LO
 	lda #>SCR_BUFFER
 	sta CUR_BUFFER_PTR_HI
 

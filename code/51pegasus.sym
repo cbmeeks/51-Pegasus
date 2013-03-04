@@ -1,9 +1,9 @@
-.label startdrawmap=$8a90
+.label startdrawmap=$89c8
 .label loop=$977
-.label TileCharLookupB=$89d0
-.label TileCharLookupC=$8a10
-.label TileCharLookupD=$8a50
-.label TileCharLookupA=$8990
+.label TileCharLookupB=$8908
+.label TileCharLookupC=$8948
+.label TileCharLookupD=$8988
+.label TileCharLookupA=$88c8
 .label start=$900 {
 }
-.label drawmap=$8a98
+.label drawmap=$89d0
