@@ -2,7 +2,7 @@
 //	Generic Variables
 //***************************************************************************
 .var charname	=	"../chars/chars.raw"
-.var room001	=	"../rooms/002.map"
+.var room001	=	"../rooms/001.map"
 
 .var tilesname 	=	"../chars/tiles.raw"
 .var num_tiles 	=	64
